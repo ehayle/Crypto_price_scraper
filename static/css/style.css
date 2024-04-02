@@ -1,0 +1,136 @@
+/* Global Styles */
+/* Define font-face for San Francisco font */
+@font-face {
+    font-family: 'San Francisco';
+    src: local('SF Pro Display'), local('SF-Pro-Display'), url(https://fonts.gstatic.com/sfprodisplay/v9/Blw5Dw-R4Ai5bFk2a-18tWU7fbndP55c.woff2) format('woff2');
+}
+
+/* Apply San Francisco font to specific elements */
+h1, h2, h3, h4, h5, p {
+    font-family: 'San Francisco', Arial, sans-serif; /* Fallback to Arial or sans-serif if San Francisco is not available */
+}
+
+body {
+    padding: 20px;
+}
+
+.crypto-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coin-logo {
+    width: 30px;
+    height: auto;
+}
+
+/* Announcement Bar Styles */
+.cryptoprice_announcement_bar {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent items from wrapping */
+    display: flex;
+    align-items: center;
+}
+
+.cryptoprice_announcement_bar .nav-link {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.cryptoprice_announcement_bar .nav-link:first-child {
+    padding-left: 3rem;
+}
+
+.cryptoprice_announcement_bar .nav-link:last-child {
+    padding-right: 3rem;
+}
+
+.cryptoprice_announcement_bar .crypto-logo {
+    width: 24px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.cryptoprice_announcement_bar .nav-item {
+    display: inline-block;
+}
+
+/* Widget Styles */
+.cryptoprice_widget {
+    background-color: #f2f2f2; /* Default background color for widget */
+    border-radius: 18px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    padding: 10px; /* Add padding for better spacing */
+    max-width: 40%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.cryptoprice_widget table {
+    border-collapse: collapse;
+}
+
+.cryptoprice_widget td {
+    padding: 12px;
+}
+
+.cryptoprice_widget .crypto-logo {
+    width: 24px;
+    height: auto;
+}
+
+/* Widget Alignment */
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* CSS */
+.equal-height-columns {
+    display: flex; /* Use flexbox for layout */
+}
+
+.equal-height-columns .column {
+    flex: 1; /* Grow to fill available space */
+    display: flex; /* Nested flex container */
+    flex-direction: column; /* Columns layout */
+}
+
+.equal-height-columns .scrollable-column {
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
+
+.scrollable-column {
+    margin-top: 10px;
+    padding: 12px 0;
+    max-height: 500px; /* Set maximum height for the scrollable column */
+    overflow-y: auto; /* Enable vertical scrolling */  
+    background-color: #f3f3f3;
+}
+
+
+
+#search-input {
+    width: 100%;
+}
+

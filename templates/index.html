@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Prices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="container crypto-container">
+
+
+
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="..\static\img\HH.png" alt="" width="30%" height="auto">
+        <h1 class="display-5 fw-bold mb-3">Happy Hodlr</h1>
+        <div class="col-lg-12 mx-auto">
+            <p class="mb-4">Real-Time Cryptocurrency Price Action</p>
+        </div>
+    </div>
+
+
+    <div class="hero2">
+        <div class="row">
+            <div class="col-6">
+                <h5>Your Favorite Cryptos With Real Time Price Action</h5>
+            </div>
+            <div class="col-6">
+                <p>Designed to integrate
+                    seamlessly with your prefered CMS.
+                    Offering your favorite cryptocurrencies with
+                    dynamic real-time price action.
+                    Choose between a full-width announcement
+                    bar or a widget design that will fit your desired location.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-12 mx-auto">
+            <p class="mb-4">Designed and Developed by <a style="color: inherit;" href="https://thehappyhodlr.com" target="_blank">&copy; Happy Hodlr</a></p>
+        </div>
+    </div>
+
+
+    <hr>
+    <h5 class="mb-4">Select Available Cryptocurrencies</h5>
+    
+    <br>
+    <form id="preferences-form">
+        <div class="form-group">
+
+            <div class="row">
+                
+                <!-- Top Ten Cryptocurrencies -->
+                <div class="col-md-6 mb-3">
+                    <h6>Top 10 Rank by Marketcap</h6>
+                    <div class="col-md-12 mb-3">
+                        <div id="top-ten-cryptos-list" class="form-check">
+                            <!-- List of top ten cryptocurrencies with checkboxes will be dynamically populated here -->
+                        </div>
+                    </div>
+                </div>
+
+            
+
+                <!-- Remaining Cryptocurrencies with vertical scroll -->
+                <div class="through_onehundoe col-md-6">
+                    <h6>Rank 11-100</h6>
+                    <input type="text" id="search-input" placeholder="Search Cryptocurrencies">
+                    <div class="col-md-12 scrollable-column">
+                        <div id="remaining-cryptos-list" class="form-check">
+                            <!-- List of cryptocurrencies 11-100 with checkboxes will be dynamically populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Update Selection</button>
+    </form>
+
+    <br><br>
+
+    <hr>
+    <br>
+    <h5>Full-Width Announcement Bar Display</h5>
+    <br>
+    <!-- Announcement bar display -->
+    <div id="announcement-bar-display">
+        <!-- Announcement bar will be displayed here -->
+    </div>
+
+    <br><br>
+    <!-- Dark mode toggle for announcement bar -->
+    <p>Style options</p>
+    <!-- HTML: Add color selection radio buttons -->
+    <div class="form-group">
+        <label>Background Color:</label><br>
+        <input type="color" id="announcement-color" name="announcement-color" value="#ffffff"> <!-- Add input field for custom color selection -->
+    </div>
+    <br>
+    <!-- Color selector for crypto and price -->
+    <div class="form-group">
+        <label for="crypto-price-color">Text Color</label><br>
+        <input type="color" name="crypto-price-color" id="crypto-price-color">
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    <h5>Widget Display</h5>
+    <br>
+    <!-- Widget display -->
+    <div id="widget-display">
+        <!-- Widget will be displayed here -->
+    </div>
+
+    <br><br>
+   
+    <p>Style options</p>
+
+    <!-- Widget Alignment Selector -->
+    <div class="form-group">
+        <label>Alignment</label><br>
+        <input type="radio" id="align-left" name="alignment" value="left" checked>
+        <label for="align-left">Left</label>
+
+        <input type="radio" id="align-center" name="alignment" value="center">
+        <label for="align-center">Center</label>
+
+        <input type="radio" id="align-right" name="alignment" value="right">
+        <label for="align-right">Right</label>
+    </div>
+<br>
+    <!-- Widget Background Color Selector -->
+    <div class="form-group">
+        <label>Background Color</label><br>
+        <input type="color" id="widget-color" name="widget-color" value="#f2f2f2"> <!-- Add input field for custom color selection -->
+    </div>
+    <br>
+   <!-- Color selector for widget text color -->
+<div class="form-group">
+    <label for="widget-text-color">Text Color</label><br>
+    <input type="color" id="widget-text-color" name="widget-text-color" value="#000000"> <!-- Add input field for custom color selection -->
+</div>
+
+
+
+   
+
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-12 mx-auto">
+            <p class="mb-4">Designed and Developed by <a style="color: inherit;" href="https://thehappyhodlr.com" target="_blank">&copy; Happy Hodlr</a></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+   
+</body>
+</html>
